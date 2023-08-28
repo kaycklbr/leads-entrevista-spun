@@ -101,3 +101,24 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+
+.sidebar{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 12px 21px 4px rgba(68, 97, 242, 0.05);
+  display: flex;
+  flex-direction: column;
+  .title{
+    font-weight: 800;
+    letter-spacing: -2px;
+  }
+}
+
+.primary-color{
+  color: $primary-color;
+}

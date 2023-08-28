@@ -1,64 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Desafio > Escribo > Teste Técnico 1
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## :clipboard: Descrição do desafio
+Implemente uma função que receba um número inteiro positivo e retorne o
+somatório de todos os valores inteiros divisíveis por 3 ou 5 que sejam inferiores ao
+número passado.
 
-## About Laravel
+## :pencil2: Exemplo
+| Valor de entrada | divisores |  Dividendos|Resultado da soma|
+|--|--|--|--|
+| 10 | 3 e 5  | 3, 5, 6, 9  |23
+| 11 | 3 e 5 | 3, 5, 6, 9, 10 |33
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Caso sua função receba o inteiro **10**, ela deve retornar **23**, resultante do somatório
+dos números **3, 5, 6 e 9** que são menores que **10**.
+- Caso sua função receba o inteiro **11**, ela deve retornar **33**, resultante do somatório
+dos números **3, 5, 6, 9 e 10** que são menores que **11**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## :hammer: instruções para executar o teste
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Comece a instalação clonando este repositório
 
-## Learning Laravel
+#### Usando http
+```
+https://github.com/pdr-dev71/primeiro-desafio-escribo.git
+```
+ou
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Usando SSH
+```
+git@github.com:pdr-dev71/primeiro-desafio-escribo.git
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Após o clone acesse a pasta do projeto no seu terminal linux/cmd windows
 
-## Laravel Sponsors
+```
+cd teste-escribo
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Atualize as dependencias caso seja necessário
 
-### Premium Partners
+```
+dart pub get
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Finalmente rode o projeto
 
-## Contributing
+```
+dart run
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+> O projeto sera iniciado e o resultados serão emitidos no terminal: ```A soma é: 23``` e ```A soma é: 33```
 
-## Code of Conduct
+### Rodando os testes
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+dart test
+```
+> Os testes serão iniciados e os resultados serão emitidos no terminal: ```00:01 +2: All tests passed! ```
 
-## Security Vulnerabilities
+ 
+## :triangular_ruler: Estrutura do projeto
+A estrutura é composta por tres pastas principais sendo elas: **bin,lib->bonus e test**. alem dos arquivos comuns a projetos dart como os de pubspec.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### :page_facing_up: Descrição das pastas quanto ao seu conteudo
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- :open_file_folder: **bin**: Nesta pasta se econtra nosso ponto de entrada do programa, a função **main** contendo o arquivo da função para o calculo.
+- :open_file_folder: **lib**: Dentro dessa se encontra o arquivo de nome sum_divisible_integers.dart, que é constituido de uma função que realiza os calculos e os exibe.
+- :open_file_folder: **bonus**: Esta possui um arquivo com uma função identica ao do arquivo principal do desafio, mas com a adição de uma captura da entrada do usuário via input no terminal, deixando o programa mais dinâmico.
+- :open_file_folder: **test**: Por ultimo mas não menos importante, temos a pasta que abriga os testes unitários para os valores que forem ser passados.

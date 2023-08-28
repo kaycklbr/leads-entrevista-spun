@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-8">
-            <img src="{{ asset('img/login.svg') }}"/>
+            <img src="{{ asset('img/register.svg') }}"/>
         </div>
         <div class="col-md-4">
             <form method="POST" action="{{ route('register') }}">
