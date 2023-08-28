@@ -1,0 +1,103 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F6F6F6;
+}
+
+.fill-height{
+  height: 100vh;
+}
+
+.navbar-auth {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  h3{
+    font-weight: 800;
+    letter-spacing: -2px;
+    .primary{
+      color: $primary-color;
+    }
+  }
+
+  ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li{ 
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        color: black;
+
+        &.active{
+          color: $primary-color;
+          padding: 10px 30px;
+          border-radius: 21px;
+          background: #FFF;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+        }
+      }
+
+    }
+  }
+}
+
+.footer-auth {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li{ 
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        color: black;
+
+        &.active{
+          color: $primary-color;
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+
+    }
+  }
+}
+
+.form-control{
+  border-radius: 10px;
+  background: #EAF0F7;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+
+  &::placeholder{
+    letter-spacing: 1px;
+  }
+}
+
+.btn{
+  font-weight: 600;
+  letter-spacing: 1px;
+}
