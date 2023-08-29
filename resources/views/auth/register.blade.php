@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@include('auth.partials.nav')
 @section('content')
+@include('auth.partials.nav')
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-8">

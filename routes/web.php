@@ -22,8 +22,11 @@ Route::namespace('App\Http\Controllers')->group(function () {
     Route::prefix('painel')->group(function () {
         Route::get('/termos-de-uso', 'TermsController@terms')->name('terms');
         Route::get('/politica-de-privacidade', 'TermsController@privacy')->name('privacy');
-        
-        Route::get('/home', 'HomeController@index')->name('home');
+
+        Route::get('/home', 'QuizController@index')->name('home');
+        Route::get('/quiz', 'QuizController@create')->name('quiz.create');
+        Route::post('/quiz', 'QuizController@store');
+
         Route::get('/leads', 'LeadsController@index')->name('leads');
         Auth::routes();
     });
