@@ -14,7 +14,13 @@ Precisamos então de um sistema que crie e gerencie quizzes, assim como os dispo
 
 Nesse cenário a gente também precisa transportar esses leads para uma api de uma ferramenta de automação de marketing. Precisamos então que seja criada a API que simulará essa ferramenta.
 
-## :hammer: instruções para executar o teste
+## Screenshots
+
+![login](https://raw.githubusercontent.com/kaycklbr/leads-entrevista-spun/main/Screenshot-Login.png)
+![login](https://raw.githubusercontent.com/kaycklbr/leads-entrevista-spun/main/Screenshot-Quizz.png)
+
+
+## :hammer: Instruções para executar o teste
 
 ### Comece a instalação clonando este repositório
 
