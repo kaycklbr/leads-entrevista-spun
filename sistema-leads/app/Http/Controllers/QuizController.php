@@ -17,7 +17,7 @@ class QuizController extends Controller
     }
 
     public function index(){
-        $quizzes = Quiz::all();
+        $quizzes = \Auth::user()->quizzes()->get();
         return view('home', compact('quizzes'));
     }
 
