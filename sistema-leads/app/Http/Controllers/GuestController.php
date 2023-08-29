@@ -91,12 +91,11 @@ class GuestController extends Controller
             DB::rollBack();
             \Log::error($e->getMessage());
         }
-        
-
 
     }
 
     public function thanks(Request $request, string $slug){
+        ProcessLead::dispatch(Lead::first())->onQueue('leads');
         $quiz = Quiz::where('slug', $slug)->with('questions')->first();
         if(!$quiz){
             return abort(404);

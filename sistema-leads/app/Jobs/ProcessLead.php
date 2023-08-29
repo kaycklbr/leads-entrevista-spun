@@ -9,6 +9,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
 
 class ProcessLead implements ShouldQueue
 {
@@ -35,7 +36,17 @@ class ProcessLead implements ShouldQueue
     public function handle()
     {
         usleep(600000);
-        \Log::debug($this->leadData);
-        // Http::post('YOUR_API_ENDPOINT', $this->leadData);
+
+        $client = new Client();
+
+        $res = $client->post(env('EXTERNAL_LEAD_STORE_ENDPOINT'), [
+            'form_params' => [
+                'name' => $this->leadData->name,
+                'email' => $this->leadData->email,
+            ]
+        ]);
+
+        \Log::debug($res->getBody()->getContents());
+        
     }
 }
