@@ -24,6 +24,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
         Route::get('/politica-de-privacidade', 'TermsController@privacy')->name('privacy');
         
         Route::get('/home', 'HomeController@index')->name('home');
+        Route::get('/leads', 'LeadsController@index')->name('leads');
         Auth::routes();
     });
 

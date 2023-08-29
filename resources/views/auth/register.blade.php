@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-8">
-            <img src="{{ asset('img/register.svg') }}"/>
+            <img src="{{ asset('img/register.svg') }}" style="max-height: 70vh"/>
         </div>
         <div class="col-md-4">
             <form method="POST" action="{{ route('register') }}">
@@ -35,7 +35,7 @@
                 <div class="row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
-                            {{ __('Register') }}
+                            {{ __('Cadastrar') }}
                         </button>
                     </div>
                 </div>

@@ -117,8 +117,45 @@ body {
     font-weight: 800;
     letter-spacing: -2px;
   }
+
+  nav ul{
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-bottom: 1rem;
+      a {
+        display: inline-flex;
+        color: black;
+        font-weight: 600;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        padding: 0 1rem;
+        text-decoration: none;
+        &:hover{
+          opacity: 0.8;
+        }
+        &.active {
+          background: $primary-color;
+          color: white;
+        }
+      }
+    }
+  }
+
 }
 
 .primary-color{
   color: $primary-color;
+}
+
+
+.content {
+  padding: 1rem 1rem 1rem calc(240px + 1rem);
+
+  .title {
+    font-weight: 800;
+  }
+
+
 }
