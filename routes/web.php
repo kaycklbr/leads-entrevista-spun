@@ -19,6 +19,8 @@ Route::namespace('App\Http\Controllers')->group(function () {
         return redirect()->route('home');
     });
 
+    Route::get('/{slug}', 'GuestController@index');
+
     Route::prefix('painel')->group(function () {
         Route::get('/termos-de-uso', 'TermsController@terms')->name('terms');
         Route::get('/politica-de-privacidade', 'TermsController@privacy')->name('privacy');
