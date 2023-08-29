@@ -95,7 +95,6 @@ class GuestController extends Controller
     }
 
     public function thanks(Request $request, string $slug){
-        ProcessLead::dispatch(Lead::first())->onQueue('leads');
         $quiz = Quiz::where('slug', $slug)->with('questions')->first();
         if(!$quiz){
             return abort(404);
