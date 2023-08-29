@@ -1,4 +1,4 @@
-# Teste Prática > SPUN
+# Teste Prático > SPUN
 # Getting Started
 
 ## :clipboard: Descrição do desafio
