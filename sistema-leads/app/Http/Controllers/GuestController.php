@@ -80,10 +80,7 @@ class GuestController extends Controller
             
             DB::commit();
 
-            if($lead->wasRecentlyCreated){
-                // Envia novos leads para a fila
-                ProcessLead::dispatch($lead)->onQueue('leads');
-            }
+            ProcessLead::dispatch($lead)->onQueue('leads');
 
             return redirect()->route('thanks', ['slug' => $slug]);
     
