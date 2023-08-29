@@ -11,6 +11,12 @@
     <ul>
       <li><a href="{{route('home')}}" class="{{(Route::is('*home*') or Route::is('*quiz*')) ? 'active' : ''}}">Quizzes</a></li>
       <li><a href="{{route('leads')}}" class="{{Route::is('*leads*') ? 'active' : ''}}">Leads</a></li>
+      <li class="mt-5">
+        <form method="post" action="{{route('logout')}}">
+          @csrf
+          <button class="btn btn-neutral w-100 text-danger">Sair</button>
+        </form>
+      </li>
     </ul>
   </nav>
 
