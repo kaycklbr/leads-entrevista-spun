@@ -16,35 +16,27 @@
     </div>
   
     <section class="quiz-question mt-5">
-      <h4 class="primary-color"><b>{{$quiz->questions()->first()->text}}</b></h4>
-  
-      <div class="options">
-        <div class="input-container">
-          <input id="walk" class="radio-button" type="radio" name="radio" />
-          <div class="radio-tile">
-            <div class="letter">A</div>
-            <label for="walk" class="radio-tile-label">{{'TESTE'}}</label>
+      @foreach($quiz->questions as $question)
+      <div class="question">
+
+        <h4 class="primary-color"><b>{{$question->text}}</b></h4>
+    
+        <div class="options">
+          <div class="input-container">
+            <input id="walk" class="radio-button" type="radio" name="radio" />
+            <div class="radio-tile">
+              <div class="letter">A</div>
+              <label for="walk" class="radio-tile-label">{{'TESTE'}}</label>
+            </div>
           </div>
         </div>
-        <div class="input-container">
-          <input id="walk" class="radio-button" type="radio" name="radio" />
-          <div class="radio-tile">
-            <div class="letter">A</div>
-            <label for="walk" class="radio-tile-label">{{'TESTE'}}</label>
-          </div>
-        </div>
-        <div class="input-container">
-          <input id="walk" class="radio-button" type="radio" name="radio" />
-          <div class="radio-tile">
-            <div class="letter">A</div>
-            <label for="walk" class="radio-tile-label">{{'TESTE'}}</label>
-          </div>
-        </div>
+
       </div>
+      @endforeach
     </section>
   </div>
   <div class="continue">
-    <button class="btn btn-success btn-lg">Continuar</button>
+    <button class="btn btn-success btn-lg next">Continuar</button>
   </div>
 </div>
 
@@ -59,5 +51,15 @@
     progress.style.opacity = 1;
     progress.style.width = progress.getAttribute('data-done') + '%';
   }, 500)
+
+
+  document.querySelector('.next').addEventListener('click', () => {
+    toast({
+      title: "Selecione uma opção!",
+      type: "info",
+      duration: 50000
+    });
+  });
+
 </script>
 @endsection
